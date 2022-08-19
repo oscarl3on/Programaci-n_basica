@@ -15,7 +15,22 @@
             }
             //Para elegir el tipo de jugada
             function eleccion(jugada){
+                
+                let resultado = ""
+                    
+                    if(jugada == 1){
+                    resultado = "Piedra"
 
+                } else if (jugada == 2){
+                    resultado = "Papel"
+
+                } else if (jugada == 3){
+                    resultado = "Tijera "
+                } else {
+                    resultado = "Debe seleccionar una de las 3 opciones"
+                }
+
+                return resultado
             }
 
             //VARIABLES
@@ -27,26 +42,10 @@
             //MOMENTO DE ELEGIR
             jugador = prompt("Elije 1 para piedra, 2 para papel y 3 para tijera")
             
+            //ELECCIONES
+            alert("Tu eliges: " + eleccion(jugador))
+            alert("PC elige: " + eleccion(pc))
             
-            //ELECCIÓN DEL JUGADOR
-            if(jugador == 1){
-                alert("Elegiste piedra")
-            } else if (jugador == 2){
-                alert("Elegiste papel")
-            } else if (jugador == 3){
-                alert("Elegiste tijera ")
-            } else {
-                alert("no es un valor valido")
-            }
-
-            //ELECION DEL PC 
-            if(pc == 1){
-                alert("PC elige piedra")
-            } else if (pc == 2){
-                alert("PC elige papel")
-            } else if (pc == 3){
-                alert("PC elige tijeras")
-            }
 
             //COMBATE  //&& es un comparador al mismo tiempo
             if(pc == jugador){
