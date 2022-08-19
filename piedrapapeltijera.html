@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Piedra, Papel, Tijera</title>
+    </head>
+    <body>
+        <h1>Piedra, Papel o Tijera</h1>
+        <script>
+            //Se declara la funcion
+            function aleatorio(min, max){
+                return Math.floor(Math.random() * (max - min + 1) + min)
+            }
+
+            //VARIABLES
+            let jugador = 0
+            let min = 1
+            let max = 3
+            let pc = aleatorio(1,3) // se llama a la funcion
+            
+            //MOMENTO DE ELEGIR
+            jugador = prompt("Elije 1 para piedra, 2 para papel y 3 para tijera")
+            
+            
+            //ELECCIÓN DEL JUGADOR
+            if(jugador == 1){
+                alert("Elegiste piedra")
+            } else if (jugador == 2){
+                alert("Elegiste papel")
+            } else if (jugador == 3){
+                alert("Elegiste tijera ")
+            } else {
+                alert("no es un valor valido")
+            }
+
+            //ELECION DEL PC 
+            if(pc == 1){
+                alert("PC elige piedra")
+            } else if (pc == 2){
+                alert("PC elige papel")
+            } else if (pc == 3){
+                alert("PC elige tijeras")
+            }
+
+            //COMBATE  //&& es un comparador al mismo tiempo
+            if(pc == jugador){
+                alert("EMPATE")
+            } else if(jugador == 1 && pc ==3){
+                    alert("GANASTE")
+            } else if(jugador == 2 && pc ==1){
+                alert("GANASTE")
+            } else if(jugador == 3 && pc == 2){
+                alert("GANASTE")
+            }else {
+                alert("PERDISTE")
+            }
+        </script>
+    </body>
+</html>
