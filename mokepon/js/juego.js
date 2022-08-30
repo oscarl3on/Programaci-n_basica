@@ -20,8 +20,9 @@ function seleccionarMascotaJugador(){
         alert("Seleccionaste a Tucapalma")
     } else if (inputPydos.checked){
         alert("Seleccionaste a Pydos")
-    }
+    } else {
+        alert('No has seleccionado nada aún')
 }
-
+}
 
 window.addEventListener('load', iniciarJuego)
