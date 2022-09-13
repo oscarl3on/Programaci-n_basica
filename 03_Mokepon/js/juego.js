@@ -1,6 +1,12 @@
+let ataqueJugador
+
 function iniciarJuego(){
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
+
+    let botonFuego
+    let botonAgua
+    let botonTierra
 }
 
 function seleccionarMascotaJugador(){
