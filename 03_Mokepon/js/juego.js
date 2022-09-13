@@ -27,6 +27,31 @@ function seleccionarMascotaJugador(){
     } else {
         alert('No has seleccionado nada aún')
 }
+
+seleccionarMascotaEnemigo()
+
+}
+
+function seleccionarMascotaEnemigo(){
+    let ataqueAleatorio = aleatorio(1,6)
+
+    if (ataqueAleatorio == 1){
+        //Hipodoge
+    } else if (ataqueAleatorio == 2){
+        //Capipepo
+    } else if (ataqueAleatorio == 3){
+        //Ratigueya
+    } else if (ataqueAleatorio == 4){
+        //Langostelvis
+    } else if (ataqueAleatorio == 5){
+        //Tucapalma
+    } else {
+        //Ratigueya
+    }
+}
+
+function aleatorio(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 window.addEventListener('load', iniciarJuego)
