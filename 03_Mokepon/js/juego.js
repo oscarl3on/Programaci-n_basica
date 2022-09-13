@@ -34,19 +34,20 @@ seleccionarMascotaEnemigo()
 
 function seleccionarMascotaEnemigo(){
     let ataqueAleatorio = aleatorio(1,6)
+    let spandMascotaEnemigo = document.getElementById('mascota-enemigo')
 
     if (ataqueAleatorio == 1){
-        //Hipodoge
+        spandMascotaEnemigo.innerHTML = 'Hipodoge'
     } else if (ataqueAleatorio == 2){
-        //Capipepo
+        spandMascotaEnemigo.innerHTML = 'Capipepo'
     } else if (ataqueAleatorio == 3){
-        //Ratigueya
+        spandMascotaEnemigo.innerHTML = 'Ratigueya'
     } else if (ataqueAleatorio == 4){
-        //Langostelvis
+        spandMascotaEnemigo.innerHTML = 'Langostelvis'
     } else if (ataqueAleatorio == 5){
-        //Tucapalma
+        spandMascotaEnemigo.innerHTML = 'Tucapalma'
     } else {
-        //Ratigueya
+        spandMascotaEnemigo.innerHTML = 'Pydos'
     }
 }
 
