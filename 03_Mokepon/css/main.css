@@ -8,12 +8,16 @@
 /*Box-sizing: para que no crezca con el pading = border-box*/
 /*Color Hunt https://colorhunt.co/*/
 /*Fuentes: https://fonts.google.com/*/
+/*Buscar imagenes png de buena calidad: https://www.pngegg.com/es*/
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@200&family=Titan+One&display=swap');
 
 body{
     font-family: 'Bungee', cursive;
-    background-color: #7FBCD2;
+    background-image: url("assets/fondo.jpg");
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .titulo{
