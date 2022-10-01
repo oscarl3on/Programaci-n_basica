@@ -5,8 +5,8 @@ let vidasEnemigo = 3
 
 
 
-function iniciarJuego(){
-  
+function iniciarJuego() {
+
 
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     sectionSeleccionarAtaque.style.display = 'none'
@@ -28,12 +28,12 @@ function iniciarJuego(){
     botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
-function seleccionarMascotaJugador(){
+function seleccionarMascotaJugador() {
     let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
     sectionSeleccionarMascota.style.display = 'none'
 
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'block'
+    sectionSeleccionarAtaque.style.display = 'flex'
 
     let inpuntHipodoge = document.getElementById('hipodoge')
     let inpuntCapipepo = document.getElementById('capipepo')
@@ -43,97 +43,97 @@ function seleccionarMascotaJugador(){
     let inputPydos = document.getElementById('pydos')
     let spandMascotaJugador = document.getElementById('mascota-jugador')
 
-    if (inpuntHipodoge.checked){
+    if (inpuntHipodoge.checked) {
         spandMascotaJugador.innerHTML = 'Hipodoge'
-    } else if (inpuntCapipepo.checked){
+    } else if (inpuntCapipepo.checked) {
         spandMascotaJugador.innerHTML = 'Capipepo'
-    } else if (inputRatigueya.checked){
+    } else if (inputRatigueya.checked) {
         spandMascotaJugador.innerHTML = 'Ratigueya'
-    }else if (inputLangostelvis.checked){
+    } else if (inputLangostelvis.checked) {
         spandMascotaJugador.innerHTML = 'Langostelvis'
-    }else if (inputTucapalma.checked){
+    } else if (inputTucapalma.checked) {
         spandMascotaJugador.innerHTML = 'Tucapalma'
-    } else if (inputPydos.checked){
+    } else if (inputPydos.checked) {
         spandMascotaJugador.innerHTML = 'Pydos'
     } else {
         alert('No has seleccionado nada aún')
+    }
+
+    seleccionarMascotaEnemigo()
+
 }
 
-seleccionarMascotaEnemigo()
-
-}
-
-function seleccionarMascotaEnemigo(){
-    let mascotaAleatoria = aleatorio(1,6)
+function seleccionarMascotaEnemigo() {
+    let mascotaAleatoria = aleatorio(1, 6)
     let spandMascotaEnemigo = document.getElementById('mascota-enemigo')
 
-    if (mascotaAleatoria == 1){
+    if (mascotaAleatoria == 1) {
         spandMascotaEnemigo.innerHTML = 'Hipodoge'
-    } else if (mascotaAleatoria == 2){
+    } else if (mascotaAleatoria == 2) {
         spandMascotaEnemigo.innerHTML = 'Capipepo'
-    } else if (mascotaAleatoria == 3){
+    } else if (mascotaAleatoria == 3) {
         spandMascotaEnemigo.innerHTML = 'Ratigueya'
-    } else if (mascotaAleatoria == 4){
+    } else if (mascotaAleatoria == 4) {
         spandMascotaEnemigo.innerHTML = 'Langostelvis'
-    } else if (mascotaAleatoria == 5){
+    } else if (mascotaAleatoria == 5) {
         spandMascotaEnemigo.innerHTML = 'Tucapalma'
     } else {
         spandMascotaEnemigo.innerHTML = 'Pydos'
     }
 }
 
-function ataqueFuego(){
+function ataqueFuego() {
     ataqueJugador = 'FUEGO'
     ataqueAleatorioEnemigo()
 }
 
-function ataqueAgua(){
+function ataqueAgua() {
     ataqueJugador = 'AGUA'
     ataqueAleatorioEnemigo()
 }
 
-function ataqueTierra(){
+function ataqueTierra() {
     ataqueJugador = 'TIERRA'
     ataqueAleatorioEnemigo()
 }
 
-function ataqueAleatorioEnemigo(){
-    let ataqueAleatorio = aleatorio(1,3)
-    
-    if (ataqueAleatorio == 1){
+function ataqueAleatorioEnemigo() {
+    let ataqueAleatorio = aleatorio(1, 3)
+
+    if (ataqueAleatorio == 1) {
         ataqueEnemigo = 'FUEGO'
-    } else if (ataqueAleatorio == 2){
+    } else if (ataqueAleatorio == 2) {
         ataqueEnemigo = 'AGUA'
-    } else{
+    } else {
         ataqueEnemigo = 'TIERRA'
     }
 
     combate()
 }
 
-function combate(){
+function combate() {
     let spanVidasJugador = document.getElementById('vidas-jugador')
     let spanVidasEnemigo = document.getElementById('vidas-enemigo')
 
-    if(ataqueEnemigo == ataqueJugador){
+    if (ataqueEnemigo == ataqueJugador) {
         crearMensaje("EMPATE")
 
-    } else if(ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
+    } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
         crearMensaje("GANASTE")
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
 
-    } else if(ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO'){
+    } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
         crearMensaje("GANASTE")
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
 
-    } else if(ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA'){
+    } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA') {
         crearMensaje("GANASTE")
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
 
-    }else {
+    } else {
         crearMensaje("PERDISTE")
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
@@ -143,15 +143,15 @@ function combate(){
 
 }
 
-function revisarVidas(){
-    if(vidasEnemigo == 0){
+function revisarVidas() {
+    if (vidasEnemigo == 0) {
         crearMensajeFinal('FELICITACIONES 😲 Ganaste 🤗')
-    } else if (vidasJugador == 0){
+    } else if (vidasJugador == 0) {
         crearMensajeFinal('LO SIENTO PERDISTE 🤐')
     }
 }
 
-function crearMensaje(resultado){
+function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById('mensajes')
 
     let parrafo = document.createElement('p')
@@ -160,7 +160,7 @@ function crearMensaje(resultado){
     sectionMensajes.appendChild(parrafo)
 }
 
-function crearMensajeFinal(resultadoFinal){
+function crearMensajeFinal(resultadoFinal) {
     let sectionMensajes = document.getElementById('mensajes')
 
     let parrafo = document.createElement('p')
@@ -179,11 +179,11 @@ function crearMensajeFinal(resultadoFinal){
     sectionSeleccionarReiniciar.style.display = 'block'
 }
 
-function reiniciarJuego (){
+function reiniciarJuego() {
     location.reload()
 }
 
-function aleatorio(min, max){
+function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
