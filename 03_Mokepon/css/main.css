@@ -25,10 +25,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@200&family=Titan+One&display=swap');
 body {
     font-family: 'Bungee', cursive;
-    background-image: url("assets/fondo.jpg");
-    background-repeat: no-repeat;   
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #A5F1E9;
 }
 
 .titulo {
