@@ -1,53 +1,64 @@
 /*DISPLAY*/
+
+
 /*Block ocupa todo el ancho de la pantalla*/
+
+
 /*Inline ocupa el ancho que le digamos de cada elemento*/
+
+
 /*Inline-block se agrupa uno al lado del otro y ocupa el ancho que le digamos*/
+
 
 /*Revisar Flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 
+
 /*Box-sizing: para que no crezca con el pading = border-box*/
+
+
 /*Color Hunt https://colorhunt.co/*/
+
+
 /*Fuentes: https://fonts.google.com/*/
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@200&family=Titan+One&display=swap');
-
-body{
+body {
     font-family: 'Bungee', cursive;
     background-color: #7FBCD2;
 }
 
-.titulo{
-    color:#FFFF;
+.titulo {
+    color: #FFFF;
     font-size: 40px;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
-.subtitulo{
+.subtitulo {
     color: #FFEEAF;
     font-size: 24px;
 }
 
-#seleccionar-mascota{
+#seleccionar-mascota {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.tarjetas{
+.tarjetas {
     display: flex;
     gap: 10px;
 }
 
-.tarjetas2{
+.tarjetas2 {
     display: flex;
     gap: 10px;
     margin-top: 20px;
 }
 
-.tarjeta-de-mokepon{
+.tarjeta-de-mokepon {
     width: 220px;
     height: 160px;
     background-color: #FFFF;
@@ -63,7 +74,7 @@ body{
     width: 80px;
 }
 
-.btn-seleccionar{
+.btn-seleccionar {
     width: 160px;
     height: 40px;
     margin-top: 30px;
@@ -74,6 +85,14 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-input{
+input {
     display: none;
 }
+
+#seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-ataque {}
