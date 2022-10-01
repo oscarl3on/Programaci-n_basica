@@ -96,4 +96,9 @@ input {
     align-items: center;
 }
 
-.btn-ataque {}
+.btn-ataque {
+    background-color: #A5F1E9;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
