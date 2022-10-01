@@ -90,6 +90,12 @@ input {
     display: none;
 }
 
+input:checked+label{
+    background-color: #A5F1E9;
+    color:  white ;
+    box-shadow: 1px 1px 10px #A5F1E9;
+}
+
 #seleccionar-ataque {
     display: flex;
     flex-direction: column;
@@ -101,4 +107,21 @@ input {
     border-radius: 5px;
     padding: 5px;
     box-sizing: border-box;
+}
+
+#mensajes{
+    background-color: #FFEEAF;
+    padding: 1px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#boton-reiniciar{
+    border: transparent;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
 }
