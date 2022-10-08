@@ -206,19 +206,12 @@ function crearMensaje(resultado) {
 }
 
 function crearMensajeFinal(resultadoFinal) {
-    
-
-    
     sectionMensajes.innerHTML = resultadoFinal
-
     
     botonFuego.disabled = true
-    
     botonAgua.disabled = true
-    
     botonTierra.disabled = true
 
-    
     sectionSeleccionarReiniciar.style.display = 'block'
 }
 
