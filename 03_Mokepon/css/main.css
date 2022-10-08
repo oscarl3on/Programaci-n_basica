@@ -48,7 +48,7 @@ body {
     align-items: center;
 }
 
-.tarjetas {
+.tarjetas, .tarjetas-ataques{
     display: flex;
     gap: 10px;
 }
@@ -142,4 +142,16 @@ input:checked+label{
     justify-content: center;
 }
 
+/*DISEÑO RESPONSIVE*/
+@media (max-width: 360px){
+    .tarjetas, .tarjetas-ataques, .tarjetas2{
+        flex-direction: column;
+    }
+}
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
