@@ -130,17 +130,20 @@ input:checked+label{
     display: grid;
     grid-template-columns: 100px 100px;
     justify-items: center;
+    background-color: aliceblue;
 }
 
-#vidas-jugador{
-    display: grid;
+#vidas-jugador, #vidas-enemigo{
+    background-color:white;
+    width: 100px;
+    display: flex;
+    color:aqua;
     justify-content: center;
 }
 
-#vidas-enemigo{
-    display: grid;
-    justify-content: center;
-}
+
+
+
 
 /*DISEÑO RESPONSIVE*/
 @media (max-width: 360px){
@@ -153,5 +156,15 @@ input:checked+label{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.ataques-jugador{
+    background-color: black;
+    color:aliceblue;
+}
+
+.ataques-enemigo{
+    background-color:aquamarine;
+    color: black;
 }
 
