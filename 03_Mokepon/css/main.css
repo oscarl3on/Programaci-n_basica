@@ -125,3 +125,21 @@ input:checked+label{
     display: flex;
     font-family: 'Poppins', sans-serif;
 }
+
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    justify-items: center;
+}
+
+#vidas-jugador{
+    display: grid;
+    justify-content: center;
+}
+
+#vidas-enemigo{
+    display: grid;
+    justify-content: center;
+}
+
+
