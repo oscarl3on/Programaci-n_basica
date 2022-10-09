@@ -1,80 +1,62 @@
 <html>
-  <head>
+
+<head>
     <title>Mokepon</title>
-   
+
     <!-- se agrega el punto para indicar la misma carpeta-->
     <link rel="stylesheet" href="./css/main.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <!--Sacar emojis en Windows, tecla window + punto / en MAC comand + alt + espacio-->
     <!--Desabilitar un elemento en HTML se hace con el atributo disabled
         https://platzi.com/profes/teffcode/-->
 
     <section id="seleccionar-mascota">
-      <h1 class="titulo">Mokepon</h1>
+        <h1 class="titulo">Mokepon</h1>
 
-      <h2 class="subtitulo">Elige a tu mascota:</h2>
+        <h2 class="subtitulo">Elige a tu mascota:</h2>
 
-      <div id="contenedorTarjetas" class="tarjetas">
-        
-      </div>
-<!--
-      <div class="tarjetas2">
-        <input type="radio" name="mascota" id="langostelvis" />
-        <label class="tarjeta-de-mokepon" for="langostelvis">
-          <p>Langostelvis</p>
-          <img src="./assets/langostelvis.png" alt="Mokepon Langostelvis" />
-        </label>
+        <div id="contenedorTarjetas" class="tarjetas">
 
-        <input type="radio" name="mascota" id="tucapalma" />
-        <label class="tarjeta-de-mokepon" for="tucapalma">
-          <p>Tucapalma</p>
-          <img src="./assets/Tucapalma.png" alt="Mokepon Tucapalma" />
-        </label>
+        </div>
 
-        <input type="radio" name="mascota" id="pydos" />
-        <label class="tarjeta-de-mokepon" for="pydos">
-          <p>Pydos</p>
-          <img src="./assets/pydos.png" alt="Mokepon Pydos" />
-        </label>
-      </div>
--->
-      <button class="btn-seleccionar" id="boton-mascota">Seleccionar</button>
+        <button class="btn-seleccionar" id="boton-mascota">Seleccionar</button>
     </section>
 
     <section id="seleccionar-ataque">
-      <h1 class="titulo">Mokepon</h1>
-      <h2 class="subtitulo">Elige tu ataque:</h2>
+        <h1 class="titulo">Mokepon</h1>
+        <h2 class="subtitulo">Elige tu ataque:</h2>
 
-      <div class="tarjetas-ataques">
-        <button id="boton-fuego" class="btn-ataque">Fuego 🔥</button>
-        <button id="boton-agua" class="btn-ataque">Agua 💧</button>
-        <button id="boton-tierra" class="btn-ataque">Tierra 🌱</button>
-      </div>
+        <div class="tarjetas-ataques">
+            <button id="boton-fuego" class="btn-ataque">Fuego 🔥</button>
+            <button id="boton-agua" class="btn-ataque">Agua 💧</button>
+            <button id="boton-tierra" class="btn-ataque">Tierra 🌱</button>
+        </div>
 
         <div id="mensajes">
             <p id="resultado">--</p>
 
             <section id="reiniciar">
                 <button id="boton-reiniciar">Reiniciar</button>
-              </section>
+            </section>
 
+        </div>
+
+        <div class="ataques">
+            <div class="ataques-jugador">
+                <p id="vidas-jugador">3</p>
+                <p id="mascota-jugador"></p>
+                <div id="ataque-del-jugador"></div>
             </div>
-
-      <div class="ataques">
-        <div class="ataques-jugador">
-          <p id="vidas-jugador">3</p>
-          <p id="mascota-jugador"></p>
-          <div id="ataque-del-jugador"></div>
+            <div class="ataques-enemigo">
+                <p id="vidas-enemigo">3</p>
+                <p id="mascota-enemigo"></p>
+                <div id="ataque-del-enemigo"></div>
+            </div>
         </div>
-        <div class="ataques-enemigo">
-          <p id="vidas-enemigo">3</p>
-          <p id="mascota-enemigo"></p>
-          <div id="ataque-del-enemigo"></div>
-        </div>
-      </div>
     </section>
     <script src="./js/juego.js"></script>
-  </body>
+</body>
+
 </html>
