@@ -31,6 +31,8 @@ let botonFuego
 let botonAgua 
 let botonTierra 
 let botones = []
+let indexAtaqueJugador
+let indexAtaqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -166,9 +168,11 @@ function secuenciaAtaques(){
                 console.log(ataqueJugador)
                 boton.style.background = '#112f58'
             }
+
+            ataqueAleatorioEnemigo()
         })
     })
-    ataqueAleatorioEnemigo()
+    
 
 }
 
@@ -191,10 +195,29 @@ function ataqueAleatorioEnemigo() {
         ataqueEnemigo.push('TIERRA')
     }
     console.log(ataqueEnemigo)
-    combate()
+    iniciarPelea()
+}
+
+function iniciarPelea(){
+    if (ataqueJugador.length === 5) {
+        combate()
+    }
+}
+
+function indexAmbosOponentes(jugador, enemigo){
+    indexAtaqueJugador = ataqueEnemigo[jugador]
+    indexAtaqueEnemigo = ataqueEnemigo[enemigo]
 }
 
 function combate() {
+
+    for (let index = 0; index < ataqueJugador.length; index++) {
+        if(ataqueJugador[index] == ataqueEnemigo[index]){
+            indexAmbosOponentes(index, index)
+            crearMensaje("EMPATE")
+        }
+        
+    }
 
     if (ataqueEnemigo == ataqueJugador) {
         crearMensaje("EMPATE")
