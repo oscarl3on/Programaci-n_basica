@@ -27,6 +27,7 @@ let opcionDeMokepones
 let inpuntHipodoge
 let inpuntCapipepo
 let inputRatigueya
+let mascotaJugador
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -104,42 +105,42 @@ function seleccionarMascotaJugador() {
     sectionSeleccionarAtaque.style.display = 'flex'
 
     if (inpuntHipodoge.checked) {
-        spandMascotaJugador.innerHTML = 'Hipodoge'
+        spandMascotaJugador.innerHTML = inpuntHipodoge.id
+        mascotaJugador = inpuntHipodoge.id
     } else if (inpuntCapipepo.checked) {
-        spandMascotaJugador.innerHTML = 'Capipepo'
+        spandMascotaJugador.innerHTML = inpuntCapipepo.id
+        mascotaJugador = inpuntCapipepo.id
     } else if (inputRatigueya.checked) {
-        spandMascotaJugador.innerHTML = 'Ratigueya'
-    } else if (inputLangostelvis.checked) {
-        spandMascotaJugador.innerHTML = 'Langostelvis'
-    } else if (inputTucapalma.checked) {
-        spandMascotaJugador.innerHTML = 'Tucapalma'
-    } else if (inputPydos.checked) {
-        spandMascotaJugador.innerHTML = 'Pydos'
+        spandMascotaJugador.innerHTML = inputRatigueya.id
+        mascotaJugador = inputRatigueya.id
     } else {
         alert('No has seleccionado nada aún')
     }
 
+    extraerAtaques(mascotaJugador)
     seleccionarMascotaEnemigo()
 
 }
 
+function extraerAtaques(mascotaJugador){
+    let ataques
+    for (let i = 0; i < mokepones.length; i++) {
+        if (mascotaJugador === mokepones[i].nombre) {
+            ataques = mokepones[i].ataques
+        }
+       
+    }
+    mostrarAtaques(ataques)
+}
+
+function mostrarAtaques(ataques){
+
+}
 
 function seleccionarMascotaEnemigo() {
-    let mascotaAleatoria = aleatorio(1, 6)
-
-    if (mascotaAleatoria == 1) {
-        spandMascotaEnemigo.innerHTML = 'Hipodoge'
-    } else if (mascotaAleatoria == 2) {
-        spandMascotaEnemigo.innerHTML = 'Capipepo'
-    } else if (mascotaAleatoria == 3) {
-        spandMascotaEnemigo.innerHTML = 'Ratigueya'
-    } else if (mascotaAleatoria == 4) {
-        spandMascotaEnemigo.innerHTML = 'Langostelvis'
-    } else if (mascotaAleatoria == 5) {
-        spandMascotaEnemigo.innerHTML = 'Tucapalma'
-    } else {
-        spandMascotaEnemigo.innerHTML = 'Pydos'
-    }
+    let mascotaAleatoria = aleatorio(0, mokepones.length -1)
+   
+    spandMascotaEnemigo.innerHTML = mokepones [mascotaAleatoria].nombre
 }
 
 function ataqueFuego() {
