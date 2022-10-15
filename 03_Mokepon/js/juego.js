@@ -29,6 +29,7 @@ let ataquesMokepon
 let botonFuego
 let botonAgua 
 let botonTierra 
+let botones = []
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -135,7 +136,7 @@ function extraerAtaques(mascotaJugador){
 function mostrarAtaques(ataques){
     ataques.forEach((ataque) =>{
         ataquesMokepon = `
-        <button id=${ataque.id} class="btn-ataque">${ataque.nombre}</button>
+        <button id=${ataque.id} class="btn-ataque BAtaque">${ataque.nombre}</button>
         `
 
         contenedorAtaques.innerHTML += ataquesMokepon
