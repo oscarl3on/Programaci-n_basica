@@ -84,9 +84,9 @@ function iniciarJuego() {
 
         contenedorTarjetas.innerHTML += opcionDeMokepones
 
-        inpuntHipodoge = document.getElementById('hipodoge')
-        inpuntCapipepo = document.getElementById('capipepo')
-        inputRatigueya = document.getElementById('ratigueya')
+        inpuntHipodoge = document.getElementById('Hipodoge')
+        inpuntCapipepo = document.getElementById('Capipepo')
+        inputRatigueya = document.getElementById('Catigueya')
     })
     
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
