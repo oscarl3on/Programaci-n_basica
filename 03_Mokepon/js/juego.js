@@ -145,11 +145,13 @@ function mostrarAtaques(ataques){
     botonFuego = document.getElementById('boton-fuego')
     botonAgua = document.getElementById('boton-agua')
     botonTierra = document.getElementById('boton-tierra')
-   
+    botones = document.querySelectorAll('.BAtaque')
 
     botonFuego.addEventListener('click', ataqueFuego)
     botonAgua.addEventListener('click', ataqueAgua)
     botonTierra.addEventListener('click', ataqueTierra)
+
+    console.log(botones)
 }
 
 function seleccionarMascotaEnemigo() {
