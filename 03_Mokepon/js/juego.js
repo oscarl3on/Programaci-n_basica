@@ -312,8 +312,20 @@ function pintarPersonaje(){
     )
 }
 
-function moverCapipepo(){
+function moverDerecha(){
     capipepo.x = capipepo.x + 5
+    pintarPersonaje()
+}
+function moverIzquierda(){
+    capipepo.x = capipepo.x - 5
+    pintarPersonaje()
+}
+function moverAbajo(){
+    capipepo.y = capipepo.y + 5
+    pintarPersonaje()
+}
+function moverArriba(){
+    capipepo.y = capipepo.y - 5
     pintarPersonaje()
 }
 

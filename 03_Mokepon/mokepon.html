@@ -24,14 +24,15 @@
 
         <button class="btn-seleccionar" id="boton-mascota">Seleccionar</button>
     </section>
+<!-- para cambiar muchas lineas con el mismo nombre se selecciona el primero y se presiona ctrl+d y para seleccionar varios con alt -->
 
     <section id="ver-mapa">
         <h1 class="titulo">Recorre el mapa con tu mokepon</h1>
         <canvas id="mapa"></canvas>
-        <button onClick="moverCapipepo()">Arriba</button>
-        <button onClick="moverCapipepo()">Izquierda</button>
-        <button onClick="moverCapipepo()">Abajo</button>
-        <button onClick="moverCapipepo()">Derecha</button>
+        <button onmouseup="detenerMovimiento" onmousedown="moverArriba()">Arriba</button> 
+        <button onmouseup="detenerMovimiento" onmousedown="moverIzquierda()">Izquierda</button>
+        <button onmouseup="detenerMovimiento" onmousedown="moverAbajo()">Abajo</button>
+        <button onmouseup="detenerMovimiento" onmousedown="moverDerecha()">Derecha</button>
     </section>
 
     <section id="seleccionar-ataque">
