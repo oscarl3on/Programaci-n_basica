@@ -42,7 +42,8 @@ let vidasJugador = 3
 let vidasEnemigo = 3
 let lienzo = mapa.getContext("2d")
 let intervalo
-
+let mapaBackground = new Image()
+mapaBackground.src = './assets/mokemap.png'
 class Mokepon {
     constructor(nombre, foto, vida){
         this.nombre = nombre
@@ -123,10 +124,7 @@ function seleccionarMascotaJugador() {
     sectionSeleccionarMascota.style.display = 'none'
     // sectionSeleccionarAtaque.style.display = 'flex'
     sectionVerMapa.style.display = 'flex'
-    intervalo = setInterval(pintarPersonaje, 50)
-
-    window.addEventListener('keydown', sePresionoUnaTecla)
-    window.addEventListener('keyup', detenerMovimiento)
+    iniciarMapa()
   
 
 
@@ -308,10 +306,17 @@ function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function pintarPersonaje(){
+function pintarCavas(){
     capipepo.x = capipepo.x + capipepo.velocidadX
     capipepo.y = capipepo.y + capipepo.velocidadY
     lienzo.clearRect(0, 0, mapa.width, mapa.height)
+    lienzo.drawImage(
+        mapaBackground,
+        0,
+        0,
+        mapa.widht,
+        mapa.height,
+    )
     lienzo.drawImage(
         capipepo.mapaFoto,
         capipepo.x,
@@ -362,6 +367,16 @@ function sePresionoUnaTecla(event){
         default:
             break;
     }
+}
+
+function iniciarMapa(){
+    mapa.widht = 800
+    mapa.hight = 600
+
+    intervalo = setInterval(pintarCavas, 50)
+
+    window.addEventListener('keydown', sePresionoUnaTecla)
+    window.addEventListener('keyup', detenerMovimiento)
 }
 
 window.addEventListener('load', iniciarJuego)
