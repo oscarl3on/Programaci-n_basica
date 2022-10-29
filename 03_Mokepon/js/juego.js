@@ -124,6 +124,8 @@ function seleccionarMascotaJugador() {
     // sectionSeleccionarAtaque.style.display = 'flex'
     sectionVerMapa.style.display = 'flex'
     intervalo = setInterval(pintarPersonaje, 50)
+
+    windows.addEventListener('keydown', sePresionoUnaTecla)
   
 
 
