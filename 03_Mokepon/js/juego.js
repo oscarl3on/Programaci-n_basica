@@ -306,7 +306,7 @@ function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function pintarCavas(){
+function pintarCanvas(){
     capipepo.x = capipepo.x + capipepo.velocidadX
     capipepo.y = capipepo.y + capipepo.velocidadY
     lienzo.clearRect(0, 0, mapa.width, mapa.height)
@@ -371,9 +371,9 @@ function sePresionoUnaTecla(event){
 
 function iniciarMapa(){
     mapa.widht = 800
-    mapa.hight = 600
+    mapa.hight = 500
 
-    intervalo = setInterval(pintarCavas, 50)
+    intervalo = setInterval(pintarCanvas, 50)
 
     window.addEventListener('keydown', sePresionoUnaTecla)
     window.addEventListener('keyup', detenerMovimiento)
