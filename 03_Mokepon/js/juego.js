@@ -302,8 +302,8 @@ function aleatorio(min, max) {
 }
 
 function pintarPersonaje(){
+    lienzo.clearRect(0, 0, mapa.width, mapa.height)
     lienzo.drawImage(
-        capipepo.mapaFoto,
         capipepo.mapaFoto,
         capipepo.x,
         capipepo.y,
@@ -311,5 +311,11 @@ function pintarPersonaje(){
         capipepo.alto,
     )
 }
+
+function moverCapipepo(){
+    capipepo.x = capipepo.x + 5
+    pintarPersonaje()
+}
+
 
 window.addEventListener('load', iniciarJuego)
