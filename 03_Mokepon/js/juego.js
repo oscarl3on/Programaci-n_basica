@@ -458,6 +458,7 @@ function revisarColision (enemigo){
         return
     }
     detenerMovimiento()
+      clearInterval(intervalo)
       sectionSeleccionarAtaque.style.display = 'flex'
       sectionVerMapa.style.display = 'none'
       seleccionarMascotaEnemigo(enemigo)
