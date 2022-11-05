@@ -468,3 +468,4 @@ function revisarColision (enemigo){
 window.addEventListener('load', iniciarJuego)
 
 // CLASE 69 ES LA QUE TOCA
+//Para ver responsive https://responsively.app/download
