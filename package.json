@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/oscarl3on/Programaci-n_basica/issues"
   },
-  "homepage": "https://github.com/oscarl3on/Programaci-n_basica#readme"
+  "homepage": "https://github.com/oscarl3on/Programaci-n_basica#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
