@@ -86,9 +86,9 @@ let hipodoge = new Mokepon('Hipodoge','./assets/hipodoge.png', 5,'./assets/hipod
 let capipepo = new Mokepon('Capipepo','./assets/capipepo.png', 5,'./assets/capipepo.png')
 let ratigueya = new Mokepon('Ratigueya','./assets/ratigueya.png', 5,'./assets/ratigueya.png')
 
-let hipodogeEnemigo = new Mokepon('Hipodoge','./assets/hipodoge.png', 5,'./assets/hipodoge.png', 80, 120)
-let capipepoEnemigo = new Mokepon('Capipepo','./assets/capipepo.png', 5,'./assets/capipepo.png', 150, 95)
-let ratigueyaEnemigo = new Mokepon('Ratigueya','./assets/ratigueya.png', 5,'./assets/ratigueya.png', 200, 190)
+let hipodogeEnemigo = new Mokepon('Hipodoge','./assets/hipodoge.png', 5,'./assets/hipodoge.png')
+let capipepoEnemigo = new Mokepon('Capipepo','./assets/capipepo.png', 5,'./assets/capipepo.png')
+let ratigueyaEnemigo = new Mokepon('Ratigueya','./assets/ratigueya.png', 5,'./assets/ratigueya.png')
 
 hipodoge.ataques.push(
     {nombre: '💧', id: 'boton-agua'},
