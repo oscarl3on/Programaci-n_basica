@@ -2,6 +2,12 @@
 
 const express = require("express")
 const app = express()
+
+app.get("/", (req, res) => {
+    res.send("Hola")
+})
+
+// Este es el puerto
 app.listen(8080, () => {
     console.log("Servidor funcionando")
 })
